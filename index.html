@@ -3,28 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ikuti Giveaway Alfamart Periode 1-10 Desember - Raih Hadiah Menarik 🎉</title>
+    <title>Ikuti Giveaway Alfamart - Raih Hadiah Menarik 🎉</title>
 
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Ikuti Giveaway Alfamart - Raih Hadiah Menarik 🎉">
-    <meta property="og:description" content="Rayakan ulang tahun Alfamart ke-35 dan menangkan hadiah keren seperti iPhone 13 dan Samsung Z Flip! Buruan daftar sekarang sebelum ketinggalan!">
+    <meta property="og:description" content="Rayakan ulang tahun Alfamart ke-25 dan menangkan hadiah keren seperti iPhone 13 dan Kuota unlimited 30 hari! Buruan daftar sekarang sebelum ketinggalan!">
     <meta property="og:image" content="https://res.cloudinary.com/ilhamnjiir/image/upload/c_thumb,w_500/v1733210730/ALFAMART_LOGO_BARU_gqoqgp.png">
-    <meta property="og:url" content="https://yourusername.github.io/giveaway-page">
+    <meta property="og:url" content="https://callmeiam.github.io/Giveaway-Alfamart">
     <meta property="og:type" content="website">
 
     <!-- Twitter Metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ikuti Giveaway Alfamart - Raih Hadiah Menarik 🎉">
-    <meta name="twitter:description" content="Rayakan ulang tahun Alfamart ke-35 dan menangkan hadiah keren seperti iPhone 13 dan Samsung Z Flip! Buruan daftar sekarang sebelum ketinggalan!">
+    <meta name="twitter:description" content="Rayakan ulang tahun Alfamart ke-25 dan menangkan hadiah keren seperti iPhone 13 dan Kuota unlimited 30 hari! Buruan daftar sekarang sebelum ketinggalan!">
     <meta name="twitter:image" content="https://res.cloudinary.com/ilhamnjiir/image/upload/c_thumb,w_500/v1733210730/ALFAMART_LOGO_BARU_gqoqgp.png">
 
     <!-- Favicon -->
     <link rel="icon" href="https://res.cloudinary.com/ilhamnjiir/image/upload/v1733210730/ALFAMART_LOGO_BARU_gqoqgp.png" type="image/x-icon">
+
+    <style>
+        /* Pop-up Container */
+        #popup-container {
+            display: none; /* Default tidak terlihat */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 9999;
+            width: 300px;
+            text-align: center;
+        }
+
+        #popup-container h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #popup-container button {
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #popup-container button:hover {
+            background-color: #20b858;
+        }
+
+        /* Background Overlay */
+        #overlay {
+            display: none; /* Default tidak terlihat */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+    </style>
 </head>
 <body>
+    <!-- Pop-up Notification -->
+    <div id="overlay"></div>
+    <div id="popup-container">
+        <h3>Bagikan Giveaway Ini ke WhatsApp 📲</h3>
+        <p>Bantu temanmu ikut serta dengan membagikan link giveaway ini!</p>
+        <button id="share-btn">Bagikan Sekarang</button>
+    </div>
+
+    <!-- Content -->
     <header style="text-align: center; margin-top: 20px;">
-        <h1 style="color: #FF4500;">🎉 Alfamart 35th Anniversary Giveaway 🎉</h1>
-        <p style="font-size: 18px;">Rayakan ulang tahun Alfamart ke-35 dengan hadiah spesial seperti iPhone 13 dan Samsung Z Flip! Jangan lewatkan kesempatan ini!</p>
+        <h1 style="color: #FF4500;">🎉 Alfamart 25th Anniversary Giveaway 🎉</h1>
+        <p style="font-size: 18px;">Rayakan ulang tahun Alfamart ke-35 dengan hadiah spesial seperti iPhone 13 dan Kuota unlimited 30 hari! Jangan lewatkan kesempatan ini!</p>
     </header>
     
     <main style="text-align: center; margin-top: 30px;">
@@ -32,7 +91,7 @@
         <p style="margin-top: 20px;">Untuk mengikuti giveaway, ikuti langkah-langkah berikut:</p>
         <ol style="text-align: left; display: inline-block; font-size: 16px;">
             <li>Follow Instagram resmi Alfamart.</li>
-            <li>Komen menggunakan hastag #GiveawayBersamaAlfamart.</li>
+            <li>Komen bebas menggunakan hastag #GiveawayBersamaAlfamart.</li>
             <li>Tag 2 teman di postingan giveaway.</li>
             <li>Klik tombol di bawah ini untuk mendaftar.</li>
         </ol>
@@ -42,5 +101,27 @@
     <footer style="text-align: center; margin-top: 50px; font-size: 12px; color: #777;">
         <p>&copy; 2024 Alfamart Giveaway. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Tampilkan Pop-up secara otomatis setelah 3 detik
+        setTimeout(() => {
+            document.getElementById('popup-container').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }, 3000); // 3 detik
+
+        // Fungsi untuk tombol "Bagikan"
+        document.getElementById('share-btn').onclick = function() {
+            const whatsappUrl = "https://wa.me/?text=Ikuti%20Giveaway%20Alfamart%20dan%20menangkan%20hadiah%20menarik!%20Klik%20di%20sini:%20https://callmeiam.github.io/Giveaway-Alfamart";
+            window.open(whatsappUrl, '_blank'); // Buka link WhatsApp
+            document.getElementById('popup-container').style.display = 'none'; // Tutup pop-up
+            document.getElementById('overlay').style.display = 'none'; // Tutup overlay
+        };
+
+        // Klik di luar pop-up untuk menutup
+        document.getElementById('overlay').onclick = function() {
+            document.getElementById('popup-container').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        };
+    </script>
 </body>
 </html>
